@@ -19,9 +19,7 @@ button.addEventListener('click', ()=>{
         let go= item[0].volumeInfo.authors.toString()
         imageDiv.innerHTML = item[0].volumeInfo.authors.toString()
         
-        // const display = dogpic.map(function(book){
-        //    return `<div> ${book.aut}</div>`
-        // }).split(",")
+        
 
     })
     .catch((error)=>{
