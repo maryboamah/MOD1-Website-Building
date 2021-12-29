@@ -171,6 +171,11 @@ text-align: center;
     flex: 50%;
    
   }
+  .allrecent{
+    display: flex;
+    flex-direction: row;
+
+  }
   .recent{
     display: flex;
     flex-direction: row;
