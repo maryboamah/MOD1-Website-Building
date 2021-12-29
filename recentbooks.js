@@ -7,7 +7,7 @@
 const url = `https://www.googleapis.com/books/v1/volumes?q=new&key=AIzaSyBwnJ8SVW--D44GOqK3qQU3ZP6TEOAYQuY`
     fetch(url)
     .then((res)=>res.json())
-    .then(async(data)=>{
+    .then((data)=>{
         let bookdata = data
      
         
@@ -34,14 +34,23 @@ const url = `https://www.googleapis.com/books/v1/volumes?q=new&key=AIzaSyBwnJ8SV
      
 
     for(let i = 0; i<startDiv.length; i++){
-        timeInterval+= 300
+        timeInterval+= 3000
          startDiv[i]
       
         let display = document.getElementById("recent1").innerHTML = startDiv[i]
-
-         new Promise.all(resolve => setInterval(() => resolve(display), timeInterval));
         
-        // setInterval(display, timeInterval)
+        
+        //promise to display the books in a time frame. Did not add a situation for rejecting because its failure will be from the 
+        //async call in the then which will throw an error in the catch so it wont get to the set time out stack
+
+         new Promise(resolve => setTimeout(() => resolve(display), timeInterval))
+         .then(function() {
+            document.getElementById("recent1").innerHTML = startDiv[i]
+            console.log("Wrapped setTimeout after 2000ms");
+        });
+        
+        console.log( new Promise(resolve => setTimeout(() => resolve(display), timeInterval)))
+        // let result = await promise
 }
 
 
@@ -53,7 +62,6 @@ const url = `https://www.googleapis.com/books/v1/volumes?q=new&key=AIzaSyBwnJ8SV
       
 
     })
-   
     .catch((error)=>{
         console.log(error)
     })
