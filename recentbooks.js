@@ -4,7 +4,7 @@
 
 
 
-const url = `https://www.googleapis.com/books/v1/volumes?q=new&key=AIzaSyBwnJ8SVW--D44GOqK3qQU3ZP6TEOAYQuY`
+const url = `https://www.googleapis.com/books/v1/volumes?q=new&maxResults=20&key=AIzaSyBwnJ8SVW--D44GOqK3qQU3ZP6TEOAYQuY`
     fetch(url)
     .then((res)=>res.json())
     .then((data)=>{
@@ -32,7 +32,8 @@ const url = `https://www.googleapis.com/books/v1/volumes?q=new&key=AIzaSyBwnJ8SV
         });
         let timeInterval = 700
      
-
+// function displayBook(){
+    
     for(let i = 0; i<startDiv.length; i++){
         timeInterval+= 3000
          startDiv[i]
@@ -49,9 +50,12 @@ const url = `https://www.googleapis.com/books/v1/volumes?q=new&key=AIzaSyBwnJ8SV
             console.log("Wrapped setTimeout after 2000ms");
         });
         
-        console.log( new Promise(resolve => setTimeout(() => resolve(display), timeInterval)))
+        console.log( new Promise(resolve => setInterval(() => resolve(display), timeInterval)))
         // let result = await promise
 }
+
+// }
+//     displayBook()
 
 
    
