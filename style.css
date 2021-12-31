@@ -248,12 +248,21 @@ a:active { text-decoration: none;
 }
 
 /* style for book search result */
-.bookresult{
+#bookresult{
 display: flex;
 flex-direction: column;
+
+}
+.row1:hover{
+  background-color: #f2f2f2;
 }
 .row1{
 display: flex;
 flex-direction: row;
+align-items: center;
+cursor: pointer;
 }
 
+.row2{
+  display: block;
+}

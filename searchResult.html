@@ -33,22 +33,54 @@
 <div class="second-content">
     <div class="recentbooks">
        <div id="recentHead">Your Search Result for "Something"</div>
-       <div class="bookresult">
-           <div class="row1">
-               <div class="row1image">Image here</div>
+       <div id="bookresult">
+           <!-- <div class="row1">
+               <div class="row1image"><img src="images/books cover.jpg" alt="book cover"></div>
                <div class="title">Title here</div>
-
-           </div>
+            </div>
+            <div class="row2">
+                <div class="author">Author(s): Name of author</div>
+                <div class="publishdate">Publication Date: Date Published</div>
+                <div class="averagerating">Rating: rating</div>
+                <div class="cost">Cost: Retail Price</div>
+                <div class="publisher">Publisher: Publisher</div>
+                <div class="pagecount">Number of Pages: Number</div>
+                <div class="previewLink">Preview on Google:   </div>
+                <div  class="description">Description: description</div>
+            </div> -->
        </div>
-       <div class="bookresult">Something</div>
-       <div class="bookresult">Something</div>
+       </div>
+      
 
     </div>
     
 
 </div>
 </div>
+<fieldset>
 
-<script src="recentbooks.js"></script>
+        
+        <form  onsubmit="searchForBooks(); return false">  
+            <label> Select Category </label>  
+            <select id="userselect"> 
+                <option value = ""> ....Select.....  
+                </option>  
+            <option value = "inauthor"> Author  
+            </option>  
+            <option value = "intitle"> Title  
+            </option>  
+            <option value = "inpublisher"> Publisher 
+            </option>  
+            <option value = "subject"> Subject  
+            </option>  
+        </option>  
+        <option value = "isbn"> ISBN  
+        </option>  
+            </select>  
+            <input type="text" name="booksearch" id="booksearchers" placeholder="Enter your serach">
+            <input type="submit"  value="Submit">
+            </form>
+        </fieldset>
+<script src="result.js"></script>
     </body>
 </html>

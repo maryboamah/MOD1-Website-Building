@@ -4,7 +4,7 @@
 
 
 
-const url = `https://www.googleapis.com/books/v1/volumes?q=new&maxResults=20&key=AIzaSyBwnJ8SVW--D44GOqK3qQU3ZP6TEOAYQuY`
+const url = `https://www.googleapis.com/books/v1/volumes?q=+inauthor&maxResults=20&orderBy=newest&key=AIzaSyBwnJ8SVW--D44GOqK3qQU3ZP6TEOAYQuY`
     fetch(url)
     .then((res)=>res.json())
     .then((data)=>{
@@ -14,15 +14,39 @@ const url = `https://www.googleapis.com/books/v1/volumes?q=new&maxResults=20&key
         let item = bookdata.items
         
         let startDiv = item.map(function(item){
-           
+           console.log(item)
             // let q = document.getElementsByClassName("recentimg")
+            let authors =""
+            let publishers =""
+            let thumbnails =""
             
-            let volumeInfo = item.volumeInfo
-           
+        
+            let volumeInfo =item.volumeInfo 
+            if(volumeInfo.authors == undefined){
+                authors = "No Author Available"
+
+            }else{
+                authors = volumeInfo.authors
+            }
+            if(volumeInfo.imageLinks == undefined){
+                thumbnails = ""
+
+            }else{
+              thumbnails= volumeInfo.imageLinks.thumbnail
+            }
+
+            if(volumeInfo.publisher == undefined){
+                publishers = "No publisher Available"
+
+            }else{
+               publishers = volumeInfo.publisher
+            }
+        
+           console.log(volumeInfo.publisher)
             return  `<div class = "allrecent"><div class="recentimg">`+
-            `<img src="${volumeInfo.imageLinks.thumbnail}" alt="bookimage"></div>` + `<div class="recentinfo">`+ `<div class="recentinfoTitle">
-            ${item.volumeInfo.title}</div><div class="recentinfoAuthor">${volumeInfo.authors.toString()} here</div>
-            <div class="recentinfoPublisher">${volumeInfo.publisher}</div>
+            `<img src="${thumbnails}" alt="bookimage"></div>` + `<div class="recentinfo">`+ `<div class="recentinfoTitle">
+            ${volumeInfo.title}</div><div class="recentinfoAuthor">${authors}</div>
+            <div class="recentinfoPublisher">${publishers}</div>
             <div class="recentinfoPubDate">${volumeInfo.publishedDate}</div>
             <div class="recentinfoReviews">${volumeInfo.pageCount}</div>
             <div class="recentinfolang">${volumeInfo.language}</div>
@@ -69,6 +93,9 @@ const url = `https://www.googleapis.com/books/v1/volumes?q=new&maxResults=20&key
     .catch((error)=>{
         console.log(error)
     })
+
+
+    
 
     
 

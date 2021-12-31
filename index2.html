@@ -44,27 +44,34 @@
         <fieldset>
 
         
-        <form>  
-            <label> Select Category </label>  
-            <select>  
-            <option value = "Author"> Author  
+            <form   onsubmit="return searchForBooks()" method="get" action="/searchResult.html" >  
+                <label> Select Category </label>  
+                <select id="userselect"> 
+                    <option value = ""> ....Select.....  
+                    </option>  
+                <option value = "inauthor"> Author  
+                </option>  
+                <option value = "intitle"> Title  
+                </option>  
+                <option value = "inpublisher"> Publisher 
+                </option>  
+                <option value = "subject"> Subject  
+                </option>  
             </option>  
-            <option value = "Title"> Title   
+            <option value = "isbn"> ISBN  
             </option>  
-            <option value = "Audi"> Audi  
-            </option>  
-            <option value = "Skoda"> Skoda  
-            </option>  
-            </select>  
-            <input type="text" name="booksearch" id="booksearch" placeholder="Enter your serach">
-            <input type="submit" value="Submit">
-            </form>
-        </fieldset>
+                </select>  
+                <input type="text" name="booksearch" id="booksearchers" placeholder="Enter your serach">
+                <input type="submit"  value="Submit">
+                </form>
+            </fieldset>
     </div>
 
 </div>
 </div>
 </section>
+<script src="result.js"></script>
 <script src="recentbooks.js"></script>
+
     </body>
 </html>
