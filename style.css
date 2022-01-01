@@ -139,7 +139,7 @@ input[name="tab"]:checked + .tab-content{
 .maincontainer{
  
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   
   }
 .brand h1{

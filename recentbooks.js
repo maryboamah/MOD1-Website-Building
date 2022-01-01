@@ -98,4 +98,12 @@ const url = `https://www.googleapis.com/books/v1/volumes?q=+inauthor&maxResults=
     
 
     
+function handleSubmit(){
+    let userselection = document.querySelector("#userselectmain")
+   const userSearchSelectionmain = userselection.value
+    let userSearch = document.querySelector("#booksearchersmain")
+    const userSearchValuemain =userSearch.value
+    localStorage.setItem("SELECTION", userSearchSelectionmain)
+    localStorage.setItem("SEARCH", userSearchValuemain)
+}
 

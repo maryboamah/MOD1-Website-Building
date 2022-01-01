@@ -44,9 +44,9 @@
         <fieldset>
 
         
-            <form   onsubmit="return searchForBooks()" method="get" action="/searchResult.html" >  
+            <form onsubmit="handleSubmit()" method="get" action="/searchResult.html" >  
                 <label> Select Category </label>  
-                <select id="userselect"> 
+                <select id="userselectmain"> 
                     <option value = ""> ....Select.....  
                     </option>  
                 <option value = "inauthor"> Author  
@@ -61,17 +61,19 @@
             <option value = "isbn"> ISBN  
             </option>  
                 </select>  
-                <input type="text" name="booksearch" id="booksearchers" placeholder="Enter your serach">
+                <input type="text" name="booksearch" id="booksearchersmain" placeholder="Enter your serach">
                 <input type="submit"  value="Submit">
-                </form>
+                </form >
             </fieldset>
     </div>
 
 </div>
+<div class="free-ebooks">Free  ebooks</div>
 </div>
+
 </section>
-<script src="result.js"></script>
-<script src="recentbooks.js"></script>
+<!-- <script src="result.js"></script> -->
+<script type="text/javascript" src="recentbooks.js"></script>
 
     </body>
 </html>
