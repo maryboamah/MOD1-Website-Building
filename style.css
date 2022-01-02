@@ -152,18 +152,25 @@ text-align: center;
 
 /* for recent books and search box */
 .second-content{
-  margin-top: 90px;
+  margin-top: 10px;
   display: flex;
   flex-direction: row;
+  margin-left: 30px;
+ 
 }
 /* for recent books display */
 .recentbooks{
   /* flex:50%; */
-  background: red;
+  background: rgba(181, 206, 166, 0.856);
   height: 50px;
   margin-right: 30px;
   display: flex;
   flex-direction: column;
+  margin-left: 30px;
+  box-shadow: #326839;
+  border-radius: 15px;
+  border-width: 1px;
+  border-style: solid;
   }
   #recent1{
     display: flex;
@@ -251,6 +258,7 @@ a:active { text-decoration: none;
 #bookresult{
 display: flex;
 flex-direction: column;
+margin-top: 60px;
 
 }
 .row1:hover{
@@ -261,8 +269,39 @@ display: flex;
 flex-direction: row;
 align-items: center;
 cursor: pointer;
+border-width: 1px;
+border-style: solid;
 }
 
 .row2{
+  display: none;
+ 
+}
+#forms1{
+  margin-top: 30px;
+  margin-bottom: 30px;
+}
+.title{
+  margin-left: 200px;
+}
+.row1image img{
+  width: 200px;
+  height: 210px;
+  border-style: solid;
+}
+.title{
+  font-size: 40px;
+}
+.allheadings{
+  font-size: 25px;
+  display: inline;
+ padding-top: 50px;
+ color: blueviolet;
+}
+.head{
+ font-size: 20px; 
+ margin-top: 10px;
+}
+.hidedetails{
   display: block;
 }

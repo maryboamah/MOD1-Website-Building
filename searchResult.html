@@ -13,8 +13,8 @@
 
     <section  class="tabs-container">
         <label for="tab1"><a href="index2.html">Home</a></label>
-        <label for="tab2">About Us</label>
-        <label for="tab3">Contact Us</label>
+        <label for="tab2"><a href="aboutus.html">About Us</a></label>
+        <label for="tab3"><a href="contactus.html">Contact Us</a></label>
         <label for="tab4">Trivia</label>
     </section>
 <!-- build section for tab content -->
@@ -32,7 +32,31 @@
 <div class="brand"><h1>PlayBook</h1></div>
 <div class="second-content">
     <div class="recentbooks">
-       <div id="recentHead">Your Search Result for "Something"</div>
+       <div id="recentHead"></div>
+       <fieldset>
+
+        
+        <form  onsubmit="searchForBooks(); return false">  
+            <label> Select Category </label>  
+            <select id="userselect"> 
+                <option value = ""> ....Select.....  
+                </option>  
+            <option value = "inauthor"> Author  
+            </option>  
+            <option value = "intitle"> Title  
+            </option>  
+            <option value = "inpublisher"> Publisher 
+            </option>  
+            <option value = "subject"> Subject  
+            </option>  
+        </option>  
+        <option value = "isbn"> ISBN  
+        </option>  
+            </select>  
+            <input type="text" name="booksearch" id="booksearchers" placeholder="Enter your serach">
+            <input type="submit"  value="Submit">
+            </form>
+        </fieldset>
        <div id="bookresult">
            <!-- <div class="row1">
                <div class="row1image"><img src="images/books cover.jpg" alt="book cover"></div>
@@ -57,30 +81,7 @@
 
 </div>
 </div>
-<fieldset>
 
-        
-        <form  onsubmit="searchForBooks(); return false">  
-            <label> Select Category </label>  
-            <select id="userselect"> 
-                <option value = ""> ....Select.....  
-                </option>  
-            <option value = "inauthor"> Author  
-            </option>  
-            <option value = "intitle"> Title  
-            </option>  
-            <option value = "inpublisher"> Publisher 
-            </option>  
-            <option value = "subject"> Subject  
-            </option>  
-        </option>  
-        <option value = "isbn"> ISBN  
-        </option>  
-            </select>  
-            <input type="text" name="booksearch" id="booksearchers" placeholder="Enter your serach">
-            <input type="submit"  value="Submit">
-            </form>
-        </fieldset>
 <script src="result.js"></script>
     </body>
 </html>
