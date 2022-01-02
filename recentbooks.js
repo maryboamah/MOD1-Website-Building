@@ -43,14 +43,15 @@ const url = `https://www.googleapis.com/books/v1/volumes?q=+inauthor&maxResults=
             }
         
            console.log(volumeInfo.publisher)
-            return  `<div class = "allrecent"><div class="recentimg">`+
-            `<img src="${thumbnails}" alt="bookimage"></div>` + `<div class="recentinfo">`+ `<div class="recentinfoTitle">
-            ${volumeInfo.title}</div><div class="recentinfoAuthor">${authors}</div>
-            <div class="recentinfoPublisher">${publishers}</div>
-            <div class="recentinfoPubDate">${volumeInfo.publishedDate}</div>
-            <div class="recentinfoReviews">${volumeInfo.pageCount}</div>
-            <div class="recentinfolang">${volumeInfo.language}</div>
-            <div class="recentinfoPreview">${volumeInfo.previewLink}</div>` + `</div></div>`
+            return  `<div class = "allrecent"><div class="recentimg">
+            <img src="${thumbnails}" alt="bookimage"></div><div class="recentinfo"><div class="head"><p class="allheadings">Title:</p>
+            ${volumeInfo.title}</div>
+            <div class="head"><p class="allheadings">Author(s):</p>${authors}</div>
+            <div class="head"><p class="allheadings">Publisher(s):</p>${publishers}</div>
+            <div class="head"><p class="allheadings">Published Date:</p>${volumeInfo.publishedDate}</div>
+            <div class="head"><p class="allheadings">Pages:</p>${volumeInfo.pageCount}</div>
+            <div class="head"><p class="allheadings">Language:</p>${volumeInfo.language}</div>
+            <div class="head"><p class="allheadings">Preview on Google:</p><a href="${volumeInfo.previewLink}">${volumeInfo.previewLink}</a> </div>` + `</div></div>`
             
             
         });

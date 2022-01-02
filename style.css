@@ -13,46 +13,6 @@ body{
 
 
 
-
-
-/* #googlesearch{
-flex: 50%;
-margin-top: 7px;
-padding: 20px;
-height: 60px;
-display: flex;
-justify-content: right;
-align-items: center;
-} */
-/* .text{
-  float: left;
-  width: 200px;
-  padding: 5px;
-  font-size: 15px;
-  color: #E36A0C ;
-  background: white url(images/search.png) right center no-repeat;
-  border: 2px solid cadetblue;
-  
-} */
-/* .submit{
-  float: right;
-  background: #A751D6;
-  padding: 5px;
-  font-weight: bold;
-  color: white;
-  font-size: 15px;
-} */
-/* .articles{
-  margin-top: 50px;
-  display: flex;
-  flex-direction: row;
-  height: 50px;
-  width: 50px;
-  background-color: red;
-} */
-
-
-
 /* .reviews{
 
 }
@@ -176,6 +136,8 @@ text-align: center;
     display: flex;
     flex-direction: column;
     flex: 50%;
+    border-style: solid;
+    border-width: 1px;
    
   }
   .allrecent{
@@ -202,35 +164,13 @@ flex: 50%;
     flex-direction: column;
   }
 
-  .recentinfoAuthor{
-
-  }
-  .recentinfoTitle{
-
-  }
-
-  .recentinfoPubDate{
-
-  }
-
-  .recentinfoReviews{
-
-  }
-  .recentinfoPublisher{
-
-  }
-  .recentinfoLang{
-
-  }
-  .recentinfoPreview{
-
-  }
-
+ 
+  
   /* for users to search for books */
   .searchbox{
     flex:50%;
       background-color: rgb(95, 158, 160, 0.73);
-    height: 50px;
+    height: 400px;
  margin-left: 30px;
  flex: 50%;
   }
@@ -304,4 +244,49 @@ border-style: solid;
 }
 .hidedetails{
   display: block;
+}
+
+#recent1 .head{
+  font-size: 20px ;
+}
+
+#recent1 a{
+  color: blue;
+}
+#recent1 img{
+  width: 400px;
+  height: 400px;
+  padding-right: 30px;
+}
+#searchfieldset{
+  height:400px ;
+  font-size: larger;
+}
+#userselectmain{
+  width: 300px;
+  font-size:30px ;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+form label{
+  font-size: 30px;
+}
+
+#searchsubmit{
+height: 40px;
+width: 250px;
+margin-left: 120px;
+margin-top: 60px;
+font-size: 30px;
+background-color: rgb(64, 103, 175, 0.4);
+border-style: solid;
+border-radius: 8px;
+border-width: 1px;
+border-color: darkblue;
+}
+#booksearchersmain{
+  height: 40px;
+  width: 400px;
+  font-size: 30px;
+  margin-top: 20px;
 }

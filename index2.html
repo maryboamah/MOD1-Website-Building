@@ -41,11 +41,11 @@
 </header>
     </div>
     <div class="searchbox">
-        <fieldset>
+        <fieldset id="searchfieldset"><legend>SEARCH FOR BOOKS</legend>
 
         
             <form onsubmit="handleSubmit()" method="get" action="/searchResult.html" >  
-                <label> Select Category </label>  
+                <label> Select Category: </label>  
                 <select id="userselectmain"> 
                     <option value = ""> ....Select.....  
                     </option>  
@@ -60,9 +60,10 @@
             </option>  
             <option value = "isbn"> ISBN  
             </option>  
-                </select>  
-                <input type="text" name="booksearch" id="booksearchersmain" placeholder="Enter your serach">
-                <input type="submit"  value="Submit">
+                </select> <br>
+                <label for="input">Enter Search Word:</label> 
+                <input type="text" name="booksearch" id="booksearchersmain" placeholder="Enter your serach"> <br>
+                <input type="submit"  value="Submit" id="searchsubmit">
                 </form >
             </fieldset>
     </div>
