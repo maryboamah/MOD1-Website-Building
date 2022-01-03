@@ -39,9 +39,27 @@ if (userSearchValueup!="" && userSearchSelectionup !=""){
                 
             });
            
+            function displayDetails(){
+
+                var row1 = document.querySelectorAll(".row1")
+                var row2 = document.querySelectorAll(".row2")
+
+                for(let i =0; i<row1.length; i++){
+                    row1[i].addEventListener('mouseover', function(){
+
+                        row2[i].classList.toggle("hidedetails")
+                        
+                        
+                    })
+
+                }
+              
+                
+               
+            }
             document.getElementById("bookresult").innerHTML = searchResultsAll
          
-    
+            displayDetails()
     
     
        
@@ -62,7 +80,7 @@ if (userSearchValueup!="" && userSearchSelectionup !=""){
 })
 
 
-//handle search for previous page
+//search for books in search page
 function searchForBooks(){
     let userselection = document.querySelector("#userselect")
 let userSearchSelection = userselection.value

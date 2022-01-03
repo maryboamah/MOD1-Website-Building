@@ -24,7 +24,7 @@ body{
 .tabs-container{
   position: relative;
   background: #326839;
-  width: 160px;
+  width: 160px; 
   height: 100vh;
   float: right;
   z-index: 20;
@@ -58,7 +58,7 @@ body{
   position:relative;
   background: #eee;
   width: calc(100% - 160px);
-  min-height:100vh;
+  max-height:auto;
   padding: 15px;
   float: left;
   box-sizing: border-box;
@@ -116,8 +116,11 @@ text-align: center;
   display: flex;
   flex-direction: row;
   margin-left: 30px;
+  flex-wrap: wrap;
  
 }
+
+
 /* for recent books display */
 .recentbooks{
   /* flex:50%; */
@@ -145,6 +148,7 @@ text-align: center;
     flex-direction: row;
 
   }
+  
   .recent{
     display: flex;
     flex-direction: row;
@@ -163,17 +167,98 @@ flex: 50%;
     display: flex;
     flex-direction: column;
   }
-
- 
-  
-  /* for users to search for books */
-  .searchbox{
-    flex:50%;
-      background-color: rgb(95, 158, 160, 0.73);
-    height: 400px;
- margin-left: 30px;
- flex: 50%;
+/* for search box an free ebooks */
+  .searchandFree{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
   }
+  
+  /* for users to search for books main page*/
+  .searchbox{
+    
+      background-color: rgb(95, 158, 160, 0.73);
+    height: 350px;
+ margin-left: 30px;
+
+ border-radius: 12px;
+ margin-top: 50px;
+  }
+  #searchfieldset{
+    height:350px ;
+    width: 350px;
+    border-radius: 12px;
+    border-width: 3px;
+  }
+
+  /* user selection in fieldset */
+#userselectmain{
+  width: 300px;
+  font-size:30px ;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+/* label for form  */
+form label{
+  font-size: 30px;
+}
+
+#searchsubmit{
+height: 40px;
+width: 250px;
+margin-left: 120px;
+margin-top: 60px;
+font-size: 30px;
+background-color: rgb(64, 103, 175, 0.4);
+border-style: solid;
+border-radius: 8px;
+border-width: 1px;
+border-color: darkblue;
+}
+
+
+#booksearchersmain{
+  height: 40px;
+  width: 400px;
+  font-size: 30px;
+  margin-top: 20px;
+}
+
+/* free ebooks */
+
+#freebooks{
+  
+ 
+ margin-left: 80px;
+ margin-right: 10px;
+  
+}
+#freebooks a{
+  color: #0104c5;
+}
+.free{
+  margin-top: 30px;
+  margin-right: 10px;
+}
+.free h2{
+  margin-left: 400px;
+}
+.allrecent2{
+  display: flex;
+  flex-direction: column;
+  height: 100px;
+}
+.allheadings2{
+  font-size: 25px;
+  display: inline;
+ padding-top: 50px;
+ color: rgb(199, 38, 10);
+}
+.head2 {
+  color: blueviolet;
+  font-size: 30px;
+}
 
   /* removing hyperlinks from navigation */
   a:link { text-decoration:none;
@@ -182,6 +267,7 @@ flex: 50%;
  }
 
 
+ /* links control */
 a:visited { text-decoration: none;
   color: #eee;}
 
@@ -201,6 +287,7 @@ flex-direction: column;
 margin-top: 60px;
 
 }
+/* change background on hovering to show its active */
 .row1:hover{
   background-color: #f2f2f2;
 }
@@ -213,6 +300,8 @@ border-width: 1px;
 border-style: solid;
 }
 
+
+/* contains information about book details */
 .row2{
   display: none;
  
@@ -242,6 +331,8 @@ border-style: solid;
  font-size: 20px; 
  margin-top: 10px;
 }
+
+
 .hidedetails{
   display: block;
 }
@@ -253,40 +344,172 @@ border-style: solid;
 #recent1 a{
   color: blue;
 }
+
+/* book image css */
 #recent1 img{
   width: 400px;
   height: 400px;
   padding-right: 30px;
 }
-#searchfieldset{
-  height:400px ;
-  font-size: larger;
-}
-#userselectmain{
-  width: 300px;
-  font-size:30px ;
-  margin-top: 20px;
-  margin-bottom: 20px;
-}
-form label{
-  font-size: 30px;
+
+
+
+
+
+
+
+
+
+/* contact form */
+
+.contactform{
+  width: 1100px;
+  height: 1100px;
+  background:rgb(255, 255, 255,0.7);
+  border-radius: 300px;
+  margin: auto;
+  /* background: linear-gradient(#E4F2B9, #165fbe);
+    background: -webkit-linear-gradient(#E4F2B9, #165fbe);
+    background: -o-linear-gradient(#E4F2B9, #165fbe);
+    background: -moz-linear-gradient(#E4F2B9, #165fbe); */
+    padding-top: 50px;
+    border-color: brown;
+    border-width: solid;
 }
 
-#searchsubmit{
-height: 40px;
-width: 250px;
-margin-left: 120px;
-margin-top: 60px;
-font-size: 30px;
-background-color: rgb(64, 103, 175, 0.4);
-border-style: solid;
-border-radius: 8px;
-border-width: 1px;
-border-color: darkblue;
+#fieldsetcontact{
+  width: 600px;
+  /* background-color: rgba(154, 155, 152, 0.4); */
+  margin-left: 150px;
+  border-radius: 22px;
+  border-color:brown;
+  
+  /* background: linear-gradient(#E4F2B9, #165fbe);
+    background: -webkit-linear-gradient(#e1e6d4, #7c96b8);
+    background: -o-linear-gradient(#E4F2B9, #165fbe);
+    background: -moz-linear-gradient(#E4F2B9, #165fbe);  */
 }
-#booksearchersmain{
-  height: 40px;
-  width: 400px;
-  font-size: 30px;
-  margin-top: 20px;
+
+#fieldsetcontact legend{
+  font-size: 40px;
+  color: #c50801;
+}
+#fieldsetcontact input{
+  margin: 30px;
+  width: 700px;
+  height: 50px;
+  
+  border-radius: 7px;
+}
+#fieldsetcontact input[type= submit]{
+  background: linear-gradient(#E4F2B9, #165fbe);
+  background: -webkit-linear-gradient(#E4F2B9, #165fbe);
+  background: -o-linear-gradient(#E4F2B9, #165fbe);
+  background: -moz-linear-gradient(#E4F2B9, #165fbe);
+font-size: 40px;
+color: white;
+
+}
+#fieldsetcontact ::placeholder{
+  font-size: 20px;
+  color: blue;
+}
+#fieldsetcontact textarea{
+  font-size: 20px;
+  color: blue;
+  border-radius: 7px;
+}
+.aboutus{
+  text-align: center;
+  margin-left: 40px;
+  font-size: 25px;
+}
+.aboutus h2{
+  font-size: 50px;
+  color:rgb(128, 0, 96);
+}
+.aboutus ul{
+  margin-left: 0px;
+  list-style-image: url('images/tick.png');
+  list-style-position: inside;
+}
+
+.whoWeAre h2{
+
+  animation-name: float;
+    animation-duration: 1s;
+    position: relative;
+    animation-timing-function: ease-in-out;
+    
+   
+    
+  }
+.whoWeAre p{
+
+animation-name: float;
+  animation-duration: 2s;
+  position: relative;
+  animation-timing-function: ease-in-out;
+  animation-fill-mode: backwards;
+  animation-delay: 3s;
+ 
+}
+#whatWeDo  h2{
+  animation-name: float;
+  animation-duration: 2s;
+  position: relative;
+  animation-delay: 6s;
+  animation-timing-function: ease-in-out;
+  animation-fill-mode: backwards;
+}
+
+#whatWeDo  li{
+  animation-name: float;
+  animation-duration: 2s;
+  position: relative;
+  animation-delay: 9s;
+  animation-timing-function: ease-in-out;
+  animation-fill-mode: backwards;
+}
+#future{
+  animation-name: float;
+  animation-duration: 2s;
+  position: relative;
+  animation-delay: 12s;
+  animation-timing-function: ease-in-out;
+  animation-fill-mode: backwards;
+}
+
+#future p{
+  animation-name: float;
+  animation-duration: 2s;
+  position: relative;
+  animation-delay: 15s;
+  animation-timing-function: ease-in-out;
+  animation-fill-mode: backwards;
+}
+
+#future li{
+  animation-name: float;
+  animation-duration: 2s;
+  position: relative;
+  animation-delay: 18s;
+  animation-timing-function: ease-in-out;
+  animation-fill-mode: backwards;
+  
+}
+
+
+
+@keyframes float{
+  from {left: -1700px;}
+  to {left: 300px;}
+}
+
+/* social  */
+.social{
+  margin-top: 60px;
+  padding-top: 40px;
+  padding-left: 40px;
+  
 }
