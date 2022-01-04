@@ -1,17 +1,12 @@
-*{
+* {
   box-sizing: border-box;
 }
 
-body{
+body {
   font: Arial, Helvitica, sans-serif;
   margin: 0;
   padding: 0;
 }
-
-
-
-
-
 
 /* .reviews{
 
@@ -21,10 +16,10 @@ body{
 } */
 
 /* Tabs main Container */
-.tabs-container{
+.tabs-container {
   position: relative;
   background: #326839;
-  width: 160px; 
+  width: 160px;
   height: 100vh;
   float: right;
   z-index: 20;
@@ -33,96 +28,87 @@ body{
 }
 
 /* for labels */
-.tabs-container label{
+.tabs-container label {
   position: relative;
   padding: 10px;
   border-radius: 20px;
   border-bottom: 5px solid rgba(248, 227, 227, 0.952);
   display: block;
   font-size: 30px;
-  color:#fff;
-  cursor:pointer;
+  color: #fff;
+  cursor: pointer;
   -webkit-user-select: none;
   -ms-user-select: none;
   user-select: none;
-  
 }
 
 /* hover effect on tab names */
-.tabs-container label:hover{
-  background: rgba(0, 0, 0,0.4);
+.tabs-container label:hover {
+  background: rgba(0, 0, 0, 0.4);
 }
 
 /* content area for tabs */
-.tab-content{
-  position:relative;
+.tab-content {
+  position: relative;
   background: #eee;
   width: calc(100% - 160px);
-  max-height:auto;
+  max-height: auto;
   padding: 15px;
   float: left;
   box-sizing: border-box;
   z-index: 19;
   display: none;
 }
-.tab-content:after{
+.tab-content:after {
   content: "";
   clear: both;
 }
 
-
 /* hide input radio from  users */
 
-input[name ="tab"]{
-  display:none;
+input[name="tab"] {
+  display: none;
 }
 
-
 /* show tab when input checked */
-input[name="tab"]:checked + .tab-content{
+input[name="tab"]:checked + .tab-content {
   display: block;
   animation: slide 0.5s forwards;
-
 }
 
 /* slide animation for tab contents */
-@keyframes slide{
-  from{
+@keyframes slide {
+  from {
     left: -100%;
     opacity: 0;
   }
-  to{
-    left:0;
+  to {
+    left: 0;
     opacity: 1;
   }
 }
-.maincontainer{
- 
+.maincontainer {
   display: flex;
   flex-direction: column;
-  
-  }
-.brand h1{
+}
+.brand h1 {
   color: #c50801;
   font-size: 70px;
-margin-top: 0px;
-text-align: center;
+  margin-top: 0px;
+  text-align: center;
 }
 
-
 /* for recent books and search box */
-.second-content{
+.second-content {
   margin-top: 10px;
   display: flex;
   flex-direction: row;
   margin-left: 30px;
   flex-wrap: wrap;
- 
 }
 
-
 /* for recent books display */
-.recentbooks{
+.recentbooks {
   /* flex:50%; */
   background: rgba(181, 206, 166, 0.856);
   height: 50px;
@@ -134,91 +120,91 @@ text-align: center;
   border-radius: 15px;
   border-width: 1px;
   border-style: solid;
-  }
-  #recent1{
-    display: flex;
-    flex-direction: column;
-    flex: 50%;
-    border-style: solid;
-    border-width: 1px;
-   
-  }
-  .allrecent{
-    display: flex;
-    flex-direction: row;
+}
+#recent1 {
+  display: flex;
+  flex-direction: column;
+  flex: 50%;
+  border-style: solid;
+  border-width: 1px;
+}
+.allrecent {
+  display: flex;
+  flex-direction: row;
+}
 
-  }
-  
-  .recent{
-    display: flex;
-    flex-direction: row;
-    flex: 50%;
-  }
-#recentHead{
+.recent {
+  display: flex;
+  flex-direction: row;
+  flex: 50%;
+}
+#recentHead {
   text-align: center;
   font-size: 50px;
 }
-  #recentimg{
-flex: 50%;
-  }
+#recentimg {
+  flex: 50%;
+}
 
-  .recentinfo{
-    flex: 50%;
-    display: flex;
-    flex-direction: column;
-  }
+.recentinfo {
+  flex: 50%;
+  display: flex;
+  flex-direction: column;
+}
 /* for search box an free ebooks */
-  .searchandFree{
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-  }
-  
-  /* for users to search for books main page*/
-  .searchbox{
-    
-      background-color: rgb(95, 158, 160, 0.73);
-    height: 350px;
- margin-left: 30px;
+.searchandFree {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
 
- border-radius: 12px;
- margin-top: 50px;
-  }
-  #searchfieldset{
-    height:350px ;
-    width: 350px;
-    border-radius: 12px;
-    border-width: 3px;
-  }
+#bookresult a{
+  color: #0104c5;
+}
 
-  /* user selection in fieldset */
-#userselectmain{
+/* for users to search for books main page*/
+.searchbox {
+  background-color: rgb(95, 158, 160, 0.73);
+  height: 350px;
+  margin-left: 30px;
+
+  border-radius: 12px;
+  margin-top: 50px;
+}
+#searchfieldset {
+  height: 350px;
+  width: 350px;
+  border-radius: 12px;
+  border-width: 3px;
+}
+
+/* user selection in fieldset */
+#userselectmain {
   width: 300px;
-  font-size:30px ;
+  font-size: 30px;
   margin-top: 20px;
   margin-bottom: 20px;
 }
 
 /* label for form  */
-form label{
+form label {
   font-size: 30px;
 }
 
-#searchsubmit{
-height: 40px;
-width: 250px;
-margin-left: 120px;
-margin-top: 60px;
-font-size: 30px;
-background-color: rgb(64, 103, 175, 0.4);
-border-style: solid;
-border-radius: 8px;
-border-width: 1px;
-border-color: darkblue;
+#searchsubmit {
+  height: 40px;
+  width: 250px;
+  margin-left: 120px;
+  margin-top: 60px;
+  font-size: 30px;
+  background-color: rgb(64, 103, 175, 0.4);
+  border-style: solid;
+  border-radius: 8px;
+  border-width: 1px;
+  border-color: darkblue;
 }
 
-
-#booksearchersmain{
+#booksearchersmain {
   height: 40px;
   width: 400px;
   font-size: 30px;
@@ -227,289 +213,267 @@ border-color: darkblue;
 
 /* free ebooks */
 
-#freebooks{
-  
- 
- margin-left: 80px;
- margin-right: 10px;
-  
+#freebooks {
+  margin-left: 80px;
+  margin-right: 10px;
 }
-#freebooks a{
+#freebooks a {
   color: #0104c5;
 }
-.free{
+.free {
   margin-top: 30px;
   margin-right: 10px;
 }
-.free h2{
+.free h2 {
   margin-left: 400px;
 }
-.allrecent2{
+.allrecent2 {
   display: flex;
   flex-direction: column;
   height: 100px;
 }
-.allheadings2{
+.allheadings2 {
   font-size: 25px;
   display: inline;
- padding-top: 50px;
- color: rgb(199, 38, 10);
+  padding-top: 50px;
+  color: rgb(199, 38, 10);
 }
 .head2 {
   color: blueviolet;
   font-size: 30px;
 }
 
-  /* removing hyperlinks from navigation */
-  a:link { text-decoration:none;
-    color: #eee;
-  
- }
+/* removing hyperlinks from navigation */
+a:link {
+  text-decoration: none;
+  color: #eee;
+}
 
+/* links control */
+a:visited {
+  text-decoration: none;
+  color: #eee;
+}
 
- /* links control */
-a:visited { text-decoration: none;
-  color: #eee;}
+a:hover {
+  text-decoration: none;
+}
 
-
-a:hover { text-decoration: none; 
-  }
-
-
-a:active { text-decoration: none;
-
+a:active {
+  text-decoration: none;
 }
 
 /* style for book search result */
-#bookresult{
-display: flex;
-flex-direction: column;
-margin-top: 60px;
-
+#bookresult {
+  display: flex;
+  flex-direction: column;
+  margin-top: 60px;
 }
 /* change background on hovering to show its active */
-.row1:hover{
+.row1:hover {
   background-color: #f2f2f2;
 }
-.row1{
-display: flex;
-flex-direction: row;
-align-items: center;
-cursor: pointer;
-border-width: 1px;
-border-style: solid;
+.row1 {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  cursor: pointer;
+  border-width: 1px;
+  border-style: solid;
 }
-
 
 /* contains information about book details */
-.row2{
+.row2 {
   display: none;
- 
 }
-#forms1{
+#forms1 {
   margin-top: 30px;
   margin-bottom: 30px;
 }
-.title{
+.title {
   margin-left: 200px;
 }
-.row1image img{
+.row1image img {
   width: 200px;
   height: 210px;
   border-style: solid;
 }
-.title{
+.title {
   font-size: 40px;
 }
-.allheadings{
+.allheadings {
   font-size: 25px;
   display: inline;
- padding-top: 50px;
- color: blueviolet;
+  padding-top: 50px;
+  color: blueviolet;
 }
-.head{
- font-size: 20px; 
- margin-top: 10px;
+.head {
+  font-size: 20px;
+  margin-top: 10px;
 }
 
-
-.hidedetails{
+.hidedetails {
   display: block;
 }
 
-#recent1 .head{
-  font-size: 20px ;
+#recent1 .head {
+  font-size: 20px;
 }
 
-#recent1 a{
+#recent1 a {
   color: blue;
 }
 
 /* book image css */
-#recent1 img{
+#recent1 img {
   width: 400px;
   height: 400px;
   padding-right: 30px;
 }
 
-
-
-
-
-
-
-
-
 /* contact form */
 
-.contactform{
+.contactform {
   width: 1100px;
   height: 1100px;
-  background:rgb(255, 255, 255,0.7);
+  background: rgb(255, 255, 255, 0.7);
   border-radius: 300px;
   margin: auto;
   /* background: linear-gradient(#E4F2B9, #165fbe);
     background: -webkit-linear-gradient(#E4F2B9, #165fbe);
     background: -o-linear-gradient(#E4F2B9, #165fbe);
     background: -moz-linear-gradient(#E4F2B9, #165fbe); */
-    padding-top: 50px;
-    border-color: brown;
-    border-width: solid;
+  padding-top: 50px;
+  border-color: brown;
+  border-width: solid;
 }
 
-#fieldsetcontact{
+#fieldsetcontact {
   width: 600px;
   /* background-color: rgba(154, 155, 152, 0.4); */
   margin-left: 150px;
   border-radius: 22px;
-  border-color:brown;
-  
+  border-color: brown;
+
   /* background: linear-gradient(#E4F2B9, #165fbe);
     background: -webkit-linear-gradient(#e1e6d4, #7c96b8);
     background: -o-linear-gradient(#E4F2B9, #165fbe);
     background: -moz-linear-gradient(#E4F2B9, #165fbe);  */
 }
 
-#fieldsetcontact legend{
+#fieldsetcontact legend {
   font-size: 40px;
   color: #c50801;
 }
-#fieldsetcontact input{
+#fieldsetcontact input {
   margin: 30px;
   width: 700px;
   height: 50px;
-  
-  border-radius: 7px;
-}
-#fieldsetcontact input[type= submit]{
-  background: linear-gradient(#E4F2B9, #165fbe);
-  background: -webkit-linear-gradient(#E4F2B9, #165fbe);
-  background: -o-linear-gradient(#E4F2B9, #165fbe);
-  background: -moz-linear-gradient(#E4F2B9, #165fbe);
-font-size: 40px;
-color: white;
 
+  border-radius: 7px;
 }
-#fieldsetcontact ::placeholder{
+#fieldsetcontact input[type="submit"] {
+  background: linear-gradient(#e4f2b9, #165fbe);
+  background: -webkit-linear-gradient(#e4f2b9, #165fbe);
+  background: -o-linear-gradient(#e4f2b9, #165fbe);
+  background: -moz-linear-gradient(#e4f2b9, #165fbe);
+  font-size: 40px;
+  color: white;
+}
+#fieldsetcontact ::placeholder {
   font-size: 20px;
   color: blue;
 }
-#fieldsetcontact textarea{
+#fieldsetcontact textarea {
   font-size: 20px;
   color: blue;
   border-radius: 7px;
 }
-.aboutus{
+.aboutus {
   text-align: center;
   margin-left: 40px;
   font-size: 25px;
 }
-.aboutus h2{
+.aboutus h2 {
   font-size: 50px;
-  color:rgb(128, 0, 96);
+  color: rgb(128, 0, 96);
 }
-.aboutus ul{
+.aboutus ul {
   margin-left: 0px;
-  list-style-image: url('images/tick.png');
+  list-style-image: url("images/tick.png");
   list-style-position: inside;
 }
 
-.whoWeAre h2{
-
+.whoWeAre h2 {
   animation-name: float;
-    animation-duration: 1s;
-    position: relative;
-    animation-timing-function: ease-in-out;
-    
-   
-    
+  animation-duration: 1s;
+  position: relative;
+  animation-timing-function: ease-in-out;
+}
+.whoWeAre p {
+  animation-name: float;
+  animation-duration: 2s;
+  position: relative;
+  animation-timing-function: ease-in-out;
+  animation-fill-mode: backwards;
+  animation-delay: 1s;
+}
+#whatWeDo h2 {
+  animation-name: float;
+  animation-duration: 2s;
+  position: relative;
+  animation-delay: 4s;
+  animation-timing-function: ease-in-out;
+  animation-fill-mode: backwards;
+}
+
+#whatWeDo li {
+  animation-name: float;
+  animation-duration: 2s;
+  position: relative;
+  animation-delay: 7s;
+  animation-timing-function: ease-in-out;
+  animation-fill-mode: backwards;
+}
+#future {
+  animation-name: float;
+  animation-duration: 2s;
+  position: relative;
+  animation-delay: 10s;
+  animation-timing-function: ease-in-out;
+  animation-fill-mode: backwards;
+}
+
+#future p {
+  animation-name: float;
+  animation-duration: 2s;
+  position: relative;
+  animation-delay: 13s;
+  animation-timing-function: ease-in-out;
+  animation-fill-mode: backwards;
+}
+
+#future li {
+  animation-name: float;
+  animation-duration: 2s;
+  position: relative;
+  animation-delay: 16s;
+  animation-timing-function: ease-in-out;
+  animation-fill-mode: backwards;
+}
+
+@keyframes float {
+  from {
+    left: -1700px;
   }
-.whoWeAre p{
-
-animation-name: float;
-  animation-duration: 2s;
-  position: relative;
-  animation-timing-function: ease-in-out;
-  animation-fill-mode: backwards;
-  animation-delay: 3s;
- 
-}
-#whatWeDo  h2{
-  animation-name: float;
-  animation-duration: 2s;
-  position: relative;
-  animation-delay: 6s;
-  animation-timing-function: ease-in-out;
-  animation-fill-mode: backwards;
-}
-
-#whatWeDo  li{
-  animation-name: float;
-  animation-duration: 2s;
-  position: relative;
-  animation-delay: 9s;
-  animation-timing-function: ease-in-out;
-  animation-fill-mode: backwards;
-}
-#future{
-  animation-name: float;
-  animation-duration: 2s;
-  position: relative;
-  animation-delay: 12s;
-  animation-timing-function: ease-in-out;
-  animation-fill-mode: backwards;
-}
-
-#future p{
-  animation-name: float;
-  animation-duration: 2s;
-  position: relative;
-  animation-delay: 15s;
-  animation-timing-function: ease-in-out;
-  animation-fill-mode: backwards;
-}
-
-#future li{
-  animation-name: float;
-  animation-duration: 2s;
-  position: relative;
-  animation-delay: 18s;
-  animation-timing-function: ease-in-out;
-  animation-fill-mode: backwards;
-  
-}
-
-
-
-@keyframes float{
-  from {left: -1700px;}
-  to {left: 300px;}
+  to {
+    left: 300px;
+  }
 }
 
 /* social  */
-.social{
+.social {
   margin-top: 60px;
   padding-top: 40px;
   padding-left: 40px;
-  
 }

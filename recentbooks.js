@@ -22,6 +22,7 @@ const url = `https://www.googleapis.com/books/v1/volumes?q=+inauthor&maxResults=
         let publishedDate =""
         let pageCount =""
         let lang = ""
+        let rating=""
         
         let volumeInfo =item.volumeInfo 
 
@@ -62,7 +63,12 @@ const url = `https://www.googleapis.com/books/v1/volumes?q=+inauthor&maxResults=
         }else{
            pageCount = volumeInfo.pageCount
         }
-    
+        if(volumeInfo.averageRating == undefined){
+            rating= "Not Available"
+
+        }else{
+           lang = volumeInfo.averageRating
+        }
         
            console.log(volumeInfo.publisher)
             return  `<div class = "allrecent"><div class="recentimg">
