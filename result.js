@@ -90,6 +90,8 @@ window.addEventListener("load", () => {
             </div>`;
         });
 
+
+// display details 
         function displayDetails() {
           var row1 = document.querySelectorAll(".row1");
           var row2 = document.querySelectorAll(".row2");
@@ -113,6 +115,7 @@ window.addEventListener("load", () => {
     alert("Please eneter a search category/word");
   }
 });
+
 
 //search for books in search page
 function searchForBooks() {

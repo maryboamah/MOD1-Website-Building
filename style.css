@@ -1,11 +1,13 @@
 * {
   box-sizing: border-box;
+  
 }
 
 body {
   font: Arial, Helvitica, sans-serif;
   margin: 0;
   padding: 0;
+  background: #eee;
 }
 
 /* .reviews{
@@ -90,6 +92,7 @@ input[name="tab"]:checked + .tab-content {
 .maincontainer {
   display: flex;
   flex-direction: column;
+  background: #eee;
 }
 .brand h1 {
   color: #c50801;
@@ -110,24 +113,40 @@ input[name="tab"]:checked + .tab-content {
 /* for recent books display */
 .recentbooks {
   /* flex:50%; */
-  background: rgba(181, 206, 166, 0.856);
+  background-color: #9DD2EA;
   height: 50px;
   margin-right: 30px;
   display: flex;
   flex-direction: column;
   margin-left: 30px;
-  box-shadow: #326839;
-  border-radius: 15px;
+  border-radius: 10px;
+    -moz-box-shadow: 4px 0px #009de4;
+    -webkit-box-shadow: 4px 0px #009de4;
+    box-shadow: 0px 4px 0px 4px #009de4 inset;
   border-width: 1px;
-  border-style: solid;
+  
 }
 #recent1 {
   display: flex;
   flex-direction: column;
   flex: 50%;
-  border-style: solid;
+  flex-wrap: wrap;
   border-width: 1px;
+  background-color: #9DD2EA;
+    /* margin: 100px auto;
+    padding: 20px; */
+    border-radius: 10px;
+    -moz-box-shadow: 0px 4px #009de4;
+    -webkit-box-shadow: 0px 4px #009de4;
+    box-shadow: 0px 4px 0px 4px #009de4;
 }
+
+.recentinfo2 {
+  display: flex;
+  flex-direction: row;
+ padding-bottom: 30px;
+}
+
 .allrecent {
   display: flex;
   flex-direction: row;
@@ -136,11 +155,13 @@ input[name="tab"]:checked + .tab-content {
 .recent {
   display: flex;
   flex-direction: row;
+  flex-wrap: wrap;
   flex: 50%;
 }
 #recentHead {
   text-align: center;
   font-size: 50px;
+  
 }
 #recentimg {
   flex: 50%;
@@ -156,6 +177,7 @@ input[name="tab"]:checked + .tab-content {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
+  justify-content: space-between;
 }
 
 #bookresult a{
@@ -165,77 +187,113 @@ input[name="tab"]:checked + .tab-content {
 /* for users to search for books main page*/
 .searchbox {
   background-color: rgb(95, 158, 160, 0.73);
-  height: 350px;
-  margin-left: 30px;
-
-  border-radius: 12px;
-  margin-top: 50px;
+  width: auto;
+  margin-top: 200px;
+  margin-bottom: 20px;
+  border-radius: 10px;
+  border-width: 0px;
+  box-shadow: 0px 4px 0px 0px rgb(10, 78, 10) ;
+  
 }
 #searchfieldset {
-  height: 350px;
-  width: 350px;
-  border-radius: 12px;
-  border-width: 3px;
+ 
+  border-radius: 10px;
+  border-width: 2px;
+  border-color: green;
+  
 }
 
 /* user selection in fieldset */
 #userselectmain {
   width: 300px;
-  font-size: 30px;
+  font-size: 25px;
   margin-top: 20px;
   margin-bottom: 20px;
+  border-radius: 10px;
+  border-width: 2px;
+  margin-right: 10px;
 }
 
 /* label for form  */
 form label {
-  font-size: 30px;
+  font-size: 25px;
 }
 
+#searchfieldset legend{
+  font-size: 30px;
+  box-shadow: 4px 2px 3px 0px rgb(47, 133, 51);
+  border-radius: 8px;
+  background-color: rgb(33, 155, 33);
+}
 #searchsubmit {
   height: 40px;
-  width: 250px;
-  margin-left: 120px;
-  margin-top: 60px;
+  width: 150px;
+  margin-left: 12px;
+  margin-top: 20px;
   font-size: 30px;
-  background-color: rgb(64, 103, 175, 0.4);
+  background-color: rgb(133, 185, 133);
   border-style: solid;
   border-radius: 8px;
-  border-width: 1px;
-  border-color: darkblue;
+  border-width: 2px;
+  color: white;
+  border-color: rgb(28, 80, 17);
 }
 
 #booksearchersmain {
-  height: 40px;
-  width: 400px;
-  font-size: 30px;
+  height: 35px;
+  width: 350px;
+  font-size: 20px;
   margin-top: 20px;
+  margin-bottom: 20px;
+  border-radius: 10px;
+  border-width: 2px;
+  padding-left: 20px;
 }
 
 /* free ebooks */
 
 #freebooks {
-  margin-left: 80px;
-  margin-right: 10px;
+  
+  border-radius: 10px;
+  background-color: #9DA0EA;
+    -moz-box-shadow: 0px 4px #535aa8;
+    -webkit-box-shadow: 0px 4px #535aa8;
+    box-shadow: 0px 4px #535aa8;
+    margin-bottom: 40px;
+   
 }
 #freebooks a {
   color: #0104c5;
 }
 .free {
-  margin-top: 30px;
+ 
   margin-right: 10px;
+  align-self: flex-end;
+ 
+  height: 50px;
+  
+  
+  margin-top: 30px;
+  border-radius: 10px;
+  background-color: #9DA0EA;
+    -moz-box-shadow: 0px 4px #535aa8;
+    -webkit-box-shadow: 0px 4px #535aa8;
+    box-shadow: 0px 4px #535aa8 inset;
+  border-width: 1px;
 }
 .free h2 {
-  margin-left: 400px;
+  text-align: center;
+  
 }
 .allrecent2 {
-  display: flex;
-  flex-direction: column;
-  height: 100px;
+  /* display: flex;
+  flex-direction: column; */
+  
 }
 .allheadings2 {
   font-size: 25px;
   display: inline;
-  padding-top: 50px;
+  padding-top: 0px;
   color: rgb(199, 38, 10);
 }
 .head2 {
